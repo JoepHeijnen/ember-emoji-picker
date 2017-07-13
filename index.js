@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-emoji-mart'
+  name: 'ember-emoji-mart',
+  included: function(/* app */) {
+    this._super.included.apply(this, arguments);
+  }
 };

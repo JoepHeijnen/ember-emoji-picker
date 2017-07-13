@@ -1,0 +1,1 @@
+export { default } from 'ember-emoji-mart/components/emoji-picker/anchors';
