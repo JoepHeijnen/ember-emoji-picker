@@ -3,5 +3,5 @@ import layout from '../templates/components/emoji-picker';
 
 export default Ember.Component.extend({
   layout,
-  classNameBindings: [':ember-emoji-mart']
+  classNameBindings: [':ember-emoji-picker']
 });

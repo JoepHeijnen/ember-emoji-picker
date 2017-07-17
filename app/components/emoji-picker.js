@@ -1,1 +1,1 @@
-export { default } from 'ember-emoji-mart/components/emoji-picker';
+export { default } from 'ember-emoji-picker/components/emoji-picker';

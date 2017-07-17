@@ -1,16 +1,16 @@
-# ember-emoji-mart
+# ember-emoji-picker
 
 > This addon is inspired and based on the [Emoji Mart](https://github.com/missive/emoji-mart/) React component created by the team at Missive.  
 
 <div align="center">
   <br><b>Ember Emoji Mart</b> is a Slack-like customizable<br>emoji picker component for EmberJS
-  <br><a href="https://jeanduplessis.github.io/ember-emoji-mart">Demo</a> • <a href="https://github.com/jeanduplessis/ember-emoji-mart/releases">Changelog</a>
+  <br><a href="https://jeanduplessis.github.io/ember-emoji-picker">Demo</a> • <a href="https://github.com/jeanduplessis/ember-emoji-picker/releases">Changelog</a>
   <br><img src="https://cloud.githubusercontent.com/assets/436043/17186519/9e71e8fe-5403-11e6-9314-21365c56a601.png">
 </div>
 
 ## Installation
 
-`ember install ember-emoji-mart`
+`ember install ember-emoji-picker`
 
 ## Usage
 ### Picker
@@ -231,7 +231,7 @@ Powered by [iamcal/emoji-data](https://github.com/iamcal/emoji-data) and inspire
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd ember-emoji-mart`
+* `cd ember-emoji-picker`
 * `npm install`
 
 ## Running
