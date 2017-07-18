@@ -1,6 +1,13 @@
-{{emoji-picker/anchors}}
+<div class="eep-bar">
+  {{emoji-picker/anchors
+    categories=categories
+    categoryLabels=categoryLabels
+    selectedCategory=selectedCategory
+    onSelect=(action "selectCategory")
+  }}
+</div>
 {{emoji-picker/search}}
-<div class="emoji-mart-scroll">
+<div class="eep-categories">
   {{emoji-picker/category}}
   {{emoji-picker/category}}
   {{emoji-picker/category}}

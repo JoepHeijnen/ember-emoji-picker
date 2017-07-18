@@ -1,1 +1,6 @@
-{{yield}}
+{{#each categories as |category|}}
+  <div title="{{get categoryLabels (lowercase category.name)}}" class="eep-anchor eep-anchor--{{lowercase category.name}} {{if (eq category.name selectedCategory) 'eep-anchor--selected'}}" {{action "selectCategory" category.name}}>
+    {{{get svgs (lowercase category.name)}}}
+    <span class='eep-anchor_bar'></span>
+  </div>
+{{/each}}

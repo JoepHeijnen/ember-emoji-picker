@@ -2,5 +2,11 @@
 'use strict';
 
 module.exports = function(/* environment, appConfig */) {
-  return { };
+  return {
+    'ember-prop-types': {
+      requireComponentPropTypes: true,
+      throwErrors: true,
+      validateOnUpdate: true
+    }
+  };
 };

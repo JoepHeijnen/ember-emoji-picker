@@ -97,7 +97,7 @@ mkdirp('data', err => {
   }
 
   const stringifiedData = JSON.stringify(data).replace(/"([A-Za-z_]+)":/g, '$1:');
-  fs.writeFile('data/index.js', `export default ${stringifiedData}`, err => {
+  fs.writeFile('addon/data/index.js', `export default ${stringifiedData}`, err => {
     if (err) {
       throw err;
     }
