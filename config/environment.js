@@ -4,7 +4,7 @@
 module.exports = function(/* environment, appConfig */) {
   return {
     'ember-prop-types': {
-      requireComponentPropTypes: true,
+      requireComponentPropTypes: false,
       throwErrors: true,
       validateOnUpdate: true
     }

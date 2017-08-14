@@ -1,1 +1,8 @@
-{{yield}}
+<div className='eep-category-label'>
+  <span>{{get categoryLabels (lowercase category.name)}}</span>
+</div>
+{{#each category.emojis as |emoji|}}
+  {{emoji-entity
+    emoji=emoji
+  }}
+{{/each}}

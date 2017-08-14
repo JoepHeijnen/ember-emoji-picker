@@ -2,7 +2,19 @@
   .emoji-entity {
     position: relative;
     display: inline-block;
-    padding: 6px;
-    font-size: 0;
+    padding: 4px;
+
+    &:hover{
+      background-color: #eeeeee;
+      border-radius: 100%;
+    }
+
+    .emoji {
+      display: block;
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+      overflow: hidden;
+    }
   }
 }

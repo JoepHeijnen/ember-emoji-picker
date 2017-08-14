@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   classNameBindings: [':eep-category'],
 
   propTypes: {
-
+    category: PropTypes.object.isRequired,
+    categoryLabels: PropTypes.object.isRequired,
   }
 });

@@ -3,13 +3,33 @@
     categories=categories
     categoryLabels=categoryLabels
     selectedCategory=selectedCategory
-    onSelect=(action "selectCategory")
+    onSelect=(action "doSelectCategory")
   }}
 </div>
-{{emoji-picker/search}}
+{{emoji-picker/search
+  onSearch=(action "doFilterEmoji")
+}}
 <div class="eep-categories">
-  {{emoji-picker/category}}
-  {{emoji-picker/category}}
-  {{emoji-picker/category}}
-  {{emoji-picker/category}}
+  {{#unless isSearching}}
+    {{#each categories as |category| }}
+      {{emoji-picker/category
+        category=category
+        categoryLabels=categoryLabels
+      }}
+    {{/each}}
+  {{else}}
+    {{#if hasSearchResults}}
+      {{emoji-picker/category
+        category=(hash
+          name='search'
+          emojis=filteredEmojis
+        )
+        categoryLabels=categoryLabels
+      }}
+    {{else}}
+      <div className='eep-no-results'>
+        <span class="eep-no-results-label">Not found</span>
+      </div>
+    {{/if}}
+  {{/unless}}
 </div>

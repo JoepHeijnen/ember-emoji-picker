@@ -8,9 +8,11 @@ export default Ember.Component.extend({
   classNameBindings: [':ember-emoji-picker'],
 
   propTypes: {
+    emojis: PropTypes.array,
     categories: PropTypes.array,
     categoryLabels: PropTypes.object,
-    selectedCategory: PropTypes.string
+    selectedCategory: PropTypes.string,
+    searchQuery: PropTypes.string
   },
 
   getDefaultProps() {
@@ -33,9 +35,21 @@ export default Ember.Component.extend({
     };
   },
 
+  isSearching: Ember.computed.notEmpty('searchQuery'),
+  filteredEmojis: Ember.computed('searchQuery', function(){
+    return []
+  }),
+
+  hasSearchResults: Ember.computed.gt('filteredEmojis.length', 0),
+
   actions: {
-    selectCategory(categoryKey) {
+    doSelectCategory(categoryKey) {
       console.log(categoryKey + 'selected');
+    },
+
+    doFilterEmoji(searchQuery) {
+      console.log('filter emoji for: ', searchQuery);
+      this.set('searchQuery', searchQuery);
     }
   }
 });
